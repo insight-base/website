@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InsightBase Solutions | Data Science</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/your-icons.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">InsightBase Solutions</div>
+        <div class="nav-links">
+            <a href="#">Home</a> <a href="#">Services</a> <a href="#">About</a> <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Turn Your Data Into Growth</h1>
+            <p>Helping SMBs convert complex data into actionable insights through business science and AI.</p>
+            <button class="cta-btn">Get a Free Data Audit</button>
+        </div>
+    </header>
+
+    <section class="what-we-do">
+        <h2>What We Do...</h2>
+        <div class="services-container">
+            <ul class="service-list">
+                {% for service in services %}
+                <li><strong>{{ service.title }} Analytics</strong> — {{ service.desc }}</li>
+                {% endfor %}
+            </ul>
+            <div class="visual-circle">
+                <span>Descriptive</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h3>"Insight-to-Action"</h3>
+        <div class="video-placeholder">
+            <i class="fas fa-play-circle"></i>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 InsightBase Solutions. From data to decisions - fast.</p>
+    </footer>
+</body>
+</html>
