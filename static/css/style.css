@@ -1,1 +1,57 @@
-/*  */
+:root {
+    --brand-dark: #1e2d2f; /* Deep teal/grey from image */
+    --brand-blue: #d1eefc; /* Light blue from circle */
+    --accent-gold: #e2b13c;
+}
+
+body { font-family: sans-serif; margin: 0; color: #333; }
+
+nav { 
+    background: var(--brand-dark); 
+    padding: 1rem 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    color: white; 
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/office_bg.jpg');
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.what-we-do {
+    padding: 50px 10%;
+    background: linear-gradient(to bottom, #f0f4f5, var(--brand-dark));
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-list { list-style: square; line-height: 2; }
+
+.visual-circle {
+    width: 200px;
+    height: 200px;
+    background: var(--brand-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e2d2f;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.cta-btn {
+    background: var(--accent-gold);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
