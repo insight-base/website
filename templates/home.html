@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightBase Solutions | Data Science & Analytics</title>
+    <style>
+        /* CSS Styles */
+        :root {
+            --primary-dark: #2c3e50; /* Based on branding image */
+            --accent-gold: #d4af37;
+            --text-light: #f4f4f4;
+            --text-dark: #333;
+            --bg-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-dark);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; }
+
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('hero-bg.jpg'); /* Replace with your office door image */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin-bottom: 2rem; }
+
+        .btn {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Services Section */
+        .services { padding: 4rem 5%; background: #f9f9f9; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--primary-dark); margin-bottom: 1rem; }
+
+        /* Video/About Section */
+        .about-video { padding: 4rem 5%; display: flex; flex-wrap: wrap; align-items: center; gap: 4rem; }
+        .about-text { flex: 1; min-width: 300px; }
+        .video-container { flex: 1; min-width: 300px; background: #000; border-radius: 10px; overflow: hidden; position: relative; padding-top: 56.25%; }
+        .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        /* Footer */
+        footer { background: var(--primary-dark); color: white; text-align: center; padding: 2rem 0; margin-top: 4rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">InsightBase Solutions</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Turn Your Data Into Growth.</h1>
+        <p>Helping small-to-medium businesses convert complex data into actionable insights through business science, machine learning, and AI.</p>
+        <a href="#contact" class="btn">Get a Free Data Audit</a>
+    </section>
+
+    <section class="services" id="services">
+        <h2>What We Do</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Descriptive Analytics</h3>
+                <p>Understand what happened with clean dashboards and clear narratives.</p>
+            </div>
+            <div class="card">
+                <h3>Diagnostic Analytics</h3>
+                <p>Learn why it happened using root-cause analysis and statistical testing.</p>
+            </div>
+            <div class="card">
+                <h3>Predictive Analytics</h3>
+                <p>Anticipate what is likely to happen with machine learning and time-series models.</p>
+            </div>
+            <div class="card">
+                <h3>Prescriptive Analytics</h3>
+                <p>Decide what to do next with optimization, simulations, and scenario planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-video" id="about">
+        <div class="about-text">
+            <h2>About InsightBase Solutions</h2>
+            <p>We are dedicated to helping SMBs navigate the complex world of data. Our mission is to provide high-level consulting that bridges the gap between raw data and strategic growth.</p>
+        </div>
+        <div class="video-container">
+            <video controls poster="video-thumbnail.jpg">
+                <source src="your-marketing-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 InsightBase Solutions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
