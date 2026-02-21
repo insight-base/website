@@ -7,7 +7,7 @@
     <style>
         /* CSS Styles */
         :root {
-            --primary-dark: #2c3e50; /* Based on branding image */
+            --primary-dark: #2c3e50; 
             --accent-gold: #d4af37;
             --text-light: #f4f4f4;
             --text-dark: #333;
@@ -28,21 +28,33 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
+            padding: 0.5rem 5%; /* Adjusted padding for logo height */
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo { font-size: 1.5rem; font-weight: bold; }
+        /* Logo Styling */
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
 
-        nav ul { list-style: none; display: flex; }
+        .logo-img {
+            height: 50px; /* Adjust this value to fit your design */
+            width: auto;
+            display: block;
+        }
+
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
         nav ul li { margin-left: 20px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: 500; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: var(--accent-gold); }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('hero-bg.jpg'); /* Replace with your office door image */
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('hero-bg.jpg'); 
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -101,8 +113,9 @@
 <body>
 
     <nav>
-        <div class="logo">InsightBase Solutions</div>
-        <div><img src="{{ url_for('static', filename='images/ibs.png') }}" alt="Left" class="logo-left"></div>
+        <a href="#home" class="logo-link">
+            <img src="{{ url_for('static', filename='images/ibs.png') }}" alt="InsightBase Solutions Logo" class="logo-img">
+        </a>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
